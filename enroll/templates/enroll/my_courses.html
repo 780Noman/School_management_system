@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+
+{% block title %}My Courses{% endblock %}
+
+{% block content %}
+<h1 class="mt-4 mb-4">My Enrolled Courses</h1>
+
+{% if enrolled_courses %}
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Enrollment Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for enrollment in enrolled_courses %}
+                    <tr>
+                        <td><a href="{% url 'course:course_detail' enrollment.course.id %}" class="text-decoration-none">{{ enrollment.course.name }}</a></td>
+                        <td>{{ enrollment.enrollment_date|date:"Y-m-d H:i" }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="alert alert-info" role="alert">
+    You are not enrolled in any courses yet.
+</div>
+{% endif %}
+{% endblock %}

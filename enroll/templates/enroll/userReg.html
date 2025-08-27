@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Enrollment Registration{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h1 class="mt-4 mb-4">Enrollment Form</h1>
+        <div class="card">
+            <div class="card-body">
+                <form action="" method="POST" novalidate>
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class="mb-3">
+                            {{ field.label_tag }}
+                            <input type="{{ field.field.widget.input_type }}" name="{{ field.name }}" class="form-control" id="{{ field.id_for_label }}">
+                            {% if field.errors %}
+                                <div class="invalid-feedback d-block">
+                                    {{ field.errors|striptags }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

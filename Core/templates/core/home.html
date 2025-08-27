@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<header class="home-hero-section">
+    <div class="container">
+        <h1 class="display-5 fw-bold">Welcome to the School Management System</h1>
+        <p>Your one-stop solution for managing courses, enrollments, and fees efficiently.</p>
+        <a href="{% url 'course:course_list' %}" class="btn btn-primary btn-lg" type="button">Browse All Courses</a>
+    </div>
+</header>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="pb-2 border-bottom">Top Courses</h2>
+            {% include 'core/topcourses.html' %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

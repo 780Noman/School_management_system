@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ course.name }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="mt-4 mb-3">{{ course.name }}</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Course Description</h5>
+                <p class="card-text">{{ course.description }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Fee:</strong> ${{ course.fee }}</li>
+                
+            </ul>
+        </div>
+        <a href="{% url 'course:course_list' %}" class="btn btn-secondary mt-3">Back to all courses</a>
+            <form action="{% url 'enroll:enroll_course' course.id %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary mt-3 ms-2">Enroll in this Course</button>
+            </form>
+    </div>
+</div>
+{% endblock %}

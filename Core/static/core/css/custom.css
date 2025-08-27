@@ -1,0 +1,314 @@
+/* Base Styling - New Color Scheme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #212121; /* Dark Grey */
+    color: #E0E0E0; /* Light Grey for general text */
+    font-family: 'Poppins', sans-serif;
+}
+
+i {
+    color: #BBDEFB; /* Light Blue Accent for icons */
+}
+
+/* Navbar Styling */
+nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(33, 33, 33, 0.8); /* Dark Grey with transparency */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+
+.navbar-brand {
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #BBDEFB !important; /* Light Blue Accent for brand */
+}
+
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: #E0E0E0 !important; /* Light Grey for links */
+    font-size: 1.3em; /* Increased font size */
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background: #673AB7; /* Deep Purple on hover */
+    border-radius: 8px;
+    color: white !important; /* White text on hover */
+}
+
+/* Home Page Hero Section */
+.home-hero-section {
+    width: 100%;
+    height: 70vh; /* Adjusted height */
+    background: linear-gradient(rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9)), url('https://via.placeholder.com/1920x1080/303030/BBDEFB?text=School+Background'); /* New Placeholder image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    /* Removed padding-top from here */
+}
+
+.home-hero-section .container {
+    width: 100%;
+    max-width: 960px;
+    padding: 0 70px;
+    padding-top: 120px; /* Adjusted padding to push content down from fixed navbar */
+}
+
+.home-hero-section h1 {
+    font-family: 'Kalam', cursive;
+    font-size: 4em;
+    color: #BBDEFB;
+    margin-bottom: 20px;
+}
+
+.home-hero-section p {
+    line-height: 2rem;
+    font-size: 1.1em;
+    color: #E0E0E0;
+    margin-bottom: 30px;
+    max-width: 700px; /* Control paragraph width */
+    margin-left: auto; /* Center paragraph */
+    margin-right: auto; /* Center paragraph */
+}
+
+/* Main Content Area */
+.container.mt-4 {
+    padding-top: 100px; /* Increased padding-top for better separation */
+    padding-bottom: 20px;
+    color: #E0E0E0;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(103, 58, 183, 0.2); /* Deep Purple shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #303030; /* Slightly Lighter Dark Grey for cards */
+    color: #E0E0E0;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(103, 58, 183, 0.4);
+}
+
+.card-title {
+    color: #BBDEFB; /* Light Blue Accent for titles */
+    font-weight: bold;
+}
+
+.card-text {
+    color: #E0E0E0;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #673AB7; /* Deep Purple */
+    border-color: #673AB7;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #512DA8; /* Darker Purple on hover */
+    border-color: #512DA8;
+}
+
+.btn-secondary {
+    background: #303030; /* Card background color */
+    border: 2px solid #E0E0E0; /* Light Grey border */
+    color: #E0E0E0;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #673AB7; /* Deep Purple on hover */
+    border-color: #673AB7;
+    color: white;
+}
+
+/* Jumbotron/Hero Section (for home page) - Adapting for new scheme */
+.p-5.mb-4.bg-light.rounded-3 {
+    background-color: #303030 !important; /* Card background color */
+    border-radius: 15px !important;
+    box-shadow: 0 6px 12px rgba(103, 58, 183, 0.2); /* Deep Purple shadow */
+    color: #E0E0E0;
+}
+
+.display-5.fw-bold {
+    color: #BBDEFB; /* Light Blue Accent for heading */
+}
+
+.fs-4 {
+    color: #E0E0E0;
+}
+
+/* Table Styling */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #303030; /* Card background color */
+    color: #E0E0E0;
+}
+
+.table thead {
+    background-color: #424242; /* Medium Dark Grey for header */
+    color: #BBDEFB; /* Light Blue Accent for header text */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(103, 58, 183, 0.05); /* Subtle stripe with Deep Purple */
+}
+
+.table th, .table td {
+    border-color: #424242; /* Medium Dark Grey borders */
+}
+
+/* Form Styling */
+.card form {
+    padding: 20px;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #424242; /* Darker border */
+    background-color: #303030; /* Card background color */
+    color: #E0E0E0;
+}
+
+.form-control:focus {
+    border-color: #673AB7; /* Deep Purple on focus */
+    box-shadow: 0 0 0 0.25rem rgba(103, 58, 183, 0.25); /* Deep Purple shadow */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #111; /* Even darker background */
+    color: #aaa; /* Lighter grey text */
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px; /* Space above footer */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    nav {
+        padding: 0 30px;
+    }
+    .container, #bio, #services, #projects, #experience, #contact, #archive, #certifications {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    header .container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .left h3 {
+        font-size: 3em;
+    }
+    .rightbio h1 {
+        font-size: 2.8em;
+    }
+    .intro h1 {
+        font-size: 2.8em;
+    }
+    .left {
+        flex-basis: 100%;
+        order: 2;
+        margin-top: 2rem;
+    }
+    .right {
+        flex-basis: 100%;
+        order: 1;
+    }
+    .right img {
+        width: 250px;
+        height: 250px;
+    }
+    #bio {
+        flex-direction: column;
+    }
+    .leftbio {
+        flex-basis: 100%;
+    }
+    .rightbio {
+        flex-basis: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .leftbio {
+        margin-bottom: 2rem;
+    }
+    .cardbody {
+        flex-basis: 45%;
+    }
+
+    .home-hero-section h1 {
+        font-size: 3em; /* Reduced font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 20px;
+    }
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .left h3 {
+        font-size: 2.5em;
+    }
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info div {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    .cardbody {
+        flex-basis: 100%;
+    }
+    .intro h1 {
+        font-size: 2.5em;
+    }
+    .rightbio h1 {
+        font-size: 2.5em;
+    }
+
+    .home-hero-section h1 {
+        font-size: 2.2em; /* Further reduced font size for mobile */
+    }
+}
