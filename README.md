@@ -69,11 +69,9 @@ Follow these instructions to set up and run the project locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/780Noman/School_management_system
 cd schoolproj
 ```
-
-*(Replace `<YOUR_GITHUB_REPOSITORY_URL>` with the actual URL of your GitHub repository.)*
 
 ### 2. Set up Virtual Environment
 
