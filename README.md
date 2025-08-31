@@ -1,3 +1,18 @@
+---
+title: School Management System
+emoji: 🏫
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+secrets:
+  - SECRET_KEY
+  - DJANGO_SUPERUSER_USERNAME
+  - DJANGO_SUPERUSER_EMAIL
+  - DJANGO_SUPERUSER_PASSWORD
+  - ALLOWED_HOSTS
+  - CSRF_TRUSTED_ORIGINS
+---
 # School Management System
 
 ## Project Overview
